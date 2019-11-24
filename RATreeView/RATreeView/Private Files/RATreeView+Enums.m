@@ -95,15 +95,22 @@
   }
 }
 
-+ (RATreeViewStyle)treeViewStyleForTableViewStyle:(UITableViewStyle)tableViewStyle
-{
-  switch (tableViewStyle) {
-    case UITableViewStylePlain:
-      return RATreeViewStylePlain;
-    case UITableViewStyleGrouped:
-      return RATreeViewStyleGrouped;
-  }
++ (RATreeViewStyle)treeViewStyleForTableViewStyle:(UITableViewStyle)tableViewStyle {
+    
+    switch (tableViewStyle) {
+            
+        case UITableViewStylePlain:
+            return RATreeViewStylePlain;
+            
+        case UITableViewStyleGrouped:
+            return RATreeViewStyleGrouped;
+            
+        default:
+            return RATreeViewStylePlain;
+    }
+    
 }
+
 #pragma mark Scroll Positions
 
 + (UITableViewScrollPosition)tableViewScrollPositionForTreeViewScrollPosition:(RATreeViewScrollPosition)scrollPosition
